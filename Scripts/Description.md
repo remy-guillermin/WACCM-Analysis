@@ -41,7 +41,7 @@ Next we want to produce a graphe of the electron density to see if we can extrac
 We need to take account of the fact that the model data extends for approximately 103 000 seconds, this means that we have more than one day (86 400 seconds) in each file and that a file can starts at any time of a day so we need to have the model file from the date before to have the full day coverage.
 
 # GraphMAD.ipynb
-Now we can plot some data from the EISCAT experiments, for that we need to load the data from the file but they are stored in a quite special way so we need to convert them to an array of array :
+Now we can plot some data from the EISCAT experiments, for that we need to load the data from the file but they are stored in a quite special way so we need to convert them to an array of array first:
 ```python
 data = f['Data']['Table Layout'][:] # Get data from the file
 metadata = f['Metadata']['Data Parameters'][:] # Get data parameters from the file
