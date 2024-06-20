@@ -1,6 +1,8 @@
 # WACCM-Analysis
 Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 
+[a relative link](Event-Informations.md)
+
 ## Goals of the project
 - Plot measured electron density profiles together with approximately simultaneous model electron density profiles.
 - Describe differences in active and quiet ionospheric conditions.
