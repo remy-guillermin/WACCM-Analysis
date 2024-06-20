@@ -1,4 +1,8 @@
 # Description of the scripts
+## sort.ipynb
+This script shall be used first to sort all experiment data files into folder if this cannot be done by hand.
+
+
 ## TESThdf5.ipynb
 The purpose of this script is purely to understand the structure of the hdf5 file. EISCAT gives us two different structure to work with, the files that start with `MAD6***` are the ones that we will use for EISCAT data and they are structured like the following:
 ```json
