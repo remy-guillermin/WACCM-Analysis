@@ -1,6 +1,5 @@
 # Description of the scripts
 ## Testhdf5.ipynb
-
 The purpose of this file is purely to understand the structure of the hdf5 file. EISCAT gives us two different structure to work with, the file that starts with 'MAD6***` is those that we will use for EISCAT data and they are structured like that:
 ```json
 {
@@ -16,3 +15,4 @@ The purpose of this file is purely to understand the structure of the hdf5 file.
   }
 }
 ```
+## Testnc.ipynb
