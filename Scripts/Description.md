@@ -19,6 +19,9 @@ The purpose of this script is purely to understand the structure of the hdf5 fil
   }
 }
 ```
+
+
+
 ## TESTnc.ipynb
 WACCM files are dictionaries that contains a lot of different variables and for the whole earth, this is why they are around 250 MB each. 
 This script allows us first to print all the keys of the dictionary so we can visually see what the model produce.
