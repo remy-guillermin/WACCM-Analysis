@@ -19,6 +19,9 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
      - EEPSPE: With both energetic protons and electrons.   
 3) Starting point
    - Years 2004, 2008 and 2011 have Geomagnetic Storms[^6] and Solar Proton[^7] events (See [here](Event-Informations.md)).
+  
+## Contributors
+- Rémy Guillermin (Summer 2024) supervised by Noora Partamies
 
 [^1]: Whole Atmosphere Community Climate Model.
 [^2]: Disturbance Storm Time index, 1 hour resolution
