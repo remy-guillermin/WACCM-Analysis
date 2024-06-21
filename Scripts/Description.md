@@ -35,8 +35,70 @@ elif '42m' in file:
   Svalbard_Data = np.concatenate((Svalbard_Data, np.repeat(True, bins)))
 ```
 
-In this script, we see that we add `[False]*bins` or `[True]*bins` depending of the location, it is only to allows us to isolate Svalbard or Tromsø event afterwards.
+In this script, we see that we add `[False]*bins` or `[True]*bins` depending on the location, it is only to allows us to isolate Svalbard or Tromsø event afterwards.
 
+Next we need to check if the current date is during a Geomagnetic Storm or a Solar Proton event, for that we have to manually add an indicator at the end of the folder name, either `-GEO` or `-SOL`. Next we just check the name of the folder, for that we first split the folder path so it's just the folder name and not the whole path and then check for either condition. We add `[False]*bins` or `[True]*bins` depending on the event type for the same reason as before.
 
+```python
+folder = '../../DataSorted/2004-01-22-GEO'
+date = folder.split('/')[-1]
 
+if 'GEO' in date and 'SOL' in date:
+  date = date.replace('-GEO', '')
+  date = date.replace('-SOL', '')
+  Geo_Event = np.concatenate((Geo_Event, np.repeat(True, bins)))
+  Solar_Event = np.concatenate((Solar_Event, np.repeat(True, bins)))
+elif 'GEO' in date and 'SOL' not in date:
+  date = date.replace('-GEO', '')
+  Geo_Event = np.concatenate((Geo_Event, np.repeat(True, bins)))
+  Solar_Event = np.concatenate((Solar_Event, np.repeat(False, bins)))
+elif 'GEO' not in date and 'SOL' in date:
+  date = date.replace('-SOL', '')
+  Geo_Event = np.concatenate((Geo_Event, np.repeat(False, bins)))
+  Solar_Event = np.concatenate((Solar_Event, np.repeat(True, bins)))
+else:
+  Geo_Event = np.concatenate((Geo_Event, np.repeat(False, bins)))
+  Solar_Event = np.concatenate((Solar_Event, np.repeat(False, bins)))
+```
+
+Another part in the script that need further explanation is the conversion of mixing ratio no electron density for the model. The mixing ratio array `Ne_array` are inhomogenous nested arrays structured as follows (these are arbitrary values):
+```python
+[[1.7e-2, 3.6e-1, 1.1e-1, 2.7e-2, ..., 3.9e-3], #10.5
+ [2.1e-2, 4.0e-1, 2.3e-1, 3.2e-2, ..., 3.8e-3], #10.7
+ ...,
+ [9.9e-3, 3.4e-1, 2.7e-1, 2.1e-2, ..., 4.6e-3]] #13.2
+#[82 km,  97 km,  105 km, 109 km, ..., 134 km]  hours
+```
+As we can see, we can have multiple mixing ratio for the same time bin or the same altitude bin.
+
+The temperature array needs one more index because they are not structured in the same order than the mixing ratio one. At the beginning of the script we remove all pressure level below 0.01 hPa for the mixing ratio but we can not do it for the pressure levels themselves.
+
+```python
+k = 1.38*10**(-23)
+def Ne_convert(E,P,T):
+    return E*P/(k*T)
+
+Ne_array = NeWACCM[t_mask_WACCM][index][h_mask_WACCM]
+T_array = T[t_mask_WACCM][index][lev_mask][h_mask_WACCM]
+Ne2_WACCM_array = np.concatenate((Ne2_WACCM_array, Ne_convert(Ne_array,P[h_mask_WACCM]*100,T_array))) 
+```
+We can convert the mixing ratio to electron density with the relation: concentration = (mixing ratio * pressure) / (boltzmann constant * temperature)
+
+```python
+int_hour_str = str(int(time_slot) + 1)
+next_int_hour_str = str(int(time_slot + time_bin) + 1) # Get next hour we will use
+dst = dst_index_file[int_hour_str][dst_mask].values[0]
+if int_hour_str != next_int_hour_str and int_hour_str != '24'
+  next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
+  dst_list.append((dst + next_dst)/2)
+  ddst_list.append((next_dst - dst)/(2*time_bin))
+elif int_hour_str == next_int_hour_str and int_hour_str != '24':
+  dst_list.append(dst)
+  next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
+  ddst_list.append((next_dst - dst)/time_bin)
+else:
+dst_list.append(dst)
+  next_dst = dst_index_file['1'][dst_shifted].values[0]
+  ddst_list.append((next_dst - dst)/time_bin)
+```
 
