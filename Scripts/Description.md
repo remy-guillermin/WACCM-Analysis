@@ -70,9 +70,10 @@ After this tricky part, we can plot the density profile as welle as the electron
 
 ![output](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/96335abb-96d0-4989-b272-48272f958fe9)
 
-# dst.ipynb
-Because we can only find index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
+# DST.ipynb
+Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
 
 # Hp30.ipynb
+We need to do the same with Hp30 index, but we use tje `json`package here.
 
 
