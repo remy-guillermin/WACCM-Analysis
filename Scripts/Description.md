@@ -2,7 +2,7 @@
 Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
 
 # Hp30.ipynb
-We need to do the same with Hp30 index, but we use tje `json`package here.
+We need to do the same with Hp30 index, but we use the `json`package here.
 
 # Create_CSV.ipynb
 This script must be used only to create the global data files named like `global_data_5_48.csv`, where in this case `5` is the number of altitude slot and `48` the number of time slot. 
@@ -84,10 +84,19 @@ Ne2_WACCM_array = np.concatenate((Ne2_WACCM_array, Ne_convert(Ne_array,P[h_mask_
 ```
 We can convert the mixing ratio to electron density with the relation: concentration = (mixing ratio * pressure) / (boltzmann constant * temperature)
 
+Next we want to retrieve the DST index value from from the dataframe we loaded. Here is how the `DST_global.csv` looks like:
+DATE | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---  | ---  | ---  | ---  | ---  | ---  | ---  | ---  | ---  | --- 
+2004-01-01 | -23 | -25.0 | -34 | -33 | -31 | -28 | -25.0 | -31 | -30.0 | -26 | -24.0 | -16.0 | -12.0 | -22 | -26.0 | -27 | -26.0 | -32.0 | -30.0 | -20.0 | -18.0 | -19.0 | -21.0 | -16.0
+2004-01-02 | -12 | -16.0 | -18 | -19 | -13 | -12 | -12.0 | -13 | -15.0 | -15 | -14.0 | -8.0 | -7.0 | -7 | -10.0 | -10 | -9.0 | -7.0 | -6.0 | -4.0 | -9.0 | -1.0 | -2.0 | -1.0
+
+When we load it we have 25 columns, one for the date and 24 for the hours of the day. The hours indexing starts at 1 because the DST index file show the value for the whole hour before that.
+
 ```python
 int_hour_str = str(int(time_slot) + 1)
-next_int_hour_str = str(int(time_slot + time_bin) + 1) # Get next hour we will use
+next_int_hour_str = str(int(time_slot + time_bin) + 1)
 dst = dst_index_file[int_hour_str][dst_mask].values[0]
+
 if int_hour_str != next_int_hour_str and int_hour_str != '24'
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
   dst_list.append((dst + next_dst)/2)
