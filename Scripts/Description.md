@@ -66,8 +66,13 @@ This creates a Panda dataframe structured as it follows (for readability some ke
 ]
 ```
 
-
 After this tricky part, we can plot the density profile as welle as the electron and ion temperature profiles:
 
 ![output](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/96335abb-96d0-4989-b272-48272f958fe9)
+
+# dst.ipynb
+Because we can only find index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
+
+# Hp30.ipynb
+
 
