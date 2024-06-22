@@ -90,15 +90,23 @@ DATE | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17
 2004-01-01 | -23 | -25.0 | -34 | -33 | -31 | -28 | -25.0 | -31 | -30.0 | -26 | -24.0 | -16.0 | -12.0 | -22 | -26.0 | -27 | -26.0 | -32.0 | -30.0 | -20.0 | -18.0 | -19.0 | -21.0 | -16.0
 2004-01-02 | -12 | -16.0 | -18 | -19 | -13 | -12 | -12.0 | -13 | -15.0 | -15 | -14.0 | -8.0 | -7.0 | -7 | -10.0 | -10 | -9.0 | -7.0 | -6.0 | -4.0 | -9.0 | -1.0 | -2.0 | -1.0
 
-When we load it we have 25 columns, one for the date and 24 for the hours of the day. The hours indexing starts at 1 because the DST index file show the value for the whole hour before that.
+When we load it we have 25 columns, one for the date and 24 for the hours of the day. The hour indexing starts at 1 because the DST index file show the value for the whole hour before that time.
+
+About the `if` loop, we first do the case where the time bin is 1 hour or is in the first half of the hour, and the current time slot is not 24:00 (this condition will be here for the three first tests) which is the easier. We can then add the dst value along with the dst gradient.
+Then we test if the hour value of the time slot we are currently in is different than the next one. If both statements are verified, this mean that we are in the second half of the hour, for example 06:30, and we cen interpolate the current dst value, along with its gradient.
+The last case is when the hour is 24:00, in this case we need to get the first DST value of the next day but we performe the same operation.
 
 ```python
 int_hour_str = str(int(time_slot) + 1)
 next_int_hour_str = str(int(time_slot + time_bin) + 1)
 dst = dst_index_file[int_hour_str][dst_mask].values[0]
 
-if int_hour_str != next_int_hour_str and int_hour_str != '24'
+if  (time_bin == 1 or int_hour_str == next_int_hour_str) and int_hour_str != '24':
+  dst_list.append(dst)
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
+  ddst_list.append((next_dst - dst)/time_bin)
+elif int_hour_str != next_int_hour_str and int_hour_str != '24':
+  next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0] 
   dst_list.append((dst + next_dst)/2)
   ddst_list.append((next_dst - dst)/(2*time_bin))
 elif int_hour_str == next_int_hour_str and int_hour_str != '24':
@@ -106,8 +114,9 @@ elif int_hour_str == next_int_hour_str and int_hour_str != '24':
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
   ddst_list.append((next_dst - dst)/time_bin)
 else:
-dst_list.append(dst)
+  dst_list.append(dst)
   next_dst = dst_index_file['1'][dst_shifted].values[0]
   ddst_list.append((next_dst - dst)/time_bin)
 ```
 
+It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predict for the next 30 minutes.
