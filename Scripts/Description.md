@@ -119,4 +119,4 @@ else:
   ddst_list.append((next_dst - dst)/time_bin)
 ```
 
-It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predict for the next 30 minutes.
+It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
