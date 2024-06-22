@@ -126,5 +126,9 @@ This script use the global data file to plot informations about the DST index. I
 
 ![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/23045a71-2b26-4842-af27-8c75743254d2)
 
+# Hp30_comparison.ipynb
+This script does the same but for the Hp30 index.
+
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/a1d77042-0027-4835-b4a8-ff79e8e59dbc)
 
 
