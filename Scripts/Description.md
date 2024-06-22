@@ -5,7 +5,7 @@ Because we can only find DST index values for one year, we need to regroup the t
 We need to do the same with Hp30 index, but we use the `json`package here.
 
 # Create_CSV.ipynb
-This script must be used only to create the global data files named like `global_data_4_48.csv`, where in this case `4` is the number of altitude slot and `48` the number of time slot. 
+This script must be used only to create the global data files named like `global_data_4_0.5.csv`, where in this case `4` is the value of one altitude slot and `0.5` the value of one time slot. 
 
 It's important to note that we can only use EISCAT files from either Tromsø or Svalbard experiment with this script.
 
