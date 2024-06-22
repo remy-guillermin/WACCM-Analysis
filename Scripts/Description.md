@@ -120,3 +120,11 @@ else:
 ```
 
 It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
+
+# DST_comparison.ipynb
+This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index for different altitude value.
+
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/23045a71-2b26-4842-af27-8c75743254d2)
+
+
+
