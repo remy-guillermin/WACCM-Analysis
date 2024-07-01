@@ -43,11 +43,11 @@ We need to take account of the fact that the model data extends for approximatel
 # GraphMAD.ipynb
 Now we can plot some data from the EISCAT experiments, for that we need to load the data from the file but they are stored in a quite special way so we need to convert them to an array of array first:
 ```python
-data = f['Data']['Table Layout'][:] # Get data from the file
-metadata = f['Metadata']['Data Parameters'][:] # Get data parameters from the file
-parameters = [parameter[0] for parameter in metadata] # Get the name of each parameters
-data = np.array([np.array(tuple.tolist()) for tuple in data]) # Convert data to array
-dataframe = pd.DataFrame(data, columns=parameters) # Create Panda dataframe for user sake
+data = f['Data']['Table Layout'][:]
+metadata = f['Metadata']['Data Parameters'][:]
+parameters = [parameter[0] for parameter in metadata]
+data = np.array([np.array(tuple.tolist()) for tuple in data])
+dataframe = pd.DataFrame(data, columns=parameters)
 ```
 
 This creates a Panda dataframe structured as it follows (for readability some keys are not shown here):
@@ -141,7 +141,7 @@ Another part in the script that need further explanation is the conversion of mi
  [9.9e-3, 3.4e-1, 2.7e-1, 2.1e-2, ..., 4.6e-3]] #13.2
 #[82 km,  97 km,  105 km, 109 km, ..., 134 km]  hours
 ```
-As we can see, we can have multiple mixing ratio for the same time bin or the same altitude bin.
+As we can see, we can have multiple mixing ratio for the same time bin (for example 9.5 -> 10.0) or the same altitude bin (90 km -> 100 km).
 
 The temperature array needs one more index because they are not structured in the same order than the mixing ratio one. At the beginning of the script we remove all pressure level below 0.01 hPa for the mixing ratio but we can not do it for the pressure levels themselves.
 
@@ -180,7 +180,7 @@ if  (time_bin == 1 or int_hour_str == next_int_hour_str) and int_hour_str != '24
 elif int_hour_str != next_int_hour_str and int_hour_str != '24':
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0] 
   dst_list.append((dst + next_dst)/2)
-  ddst_list.append((next_dst - dst)/(2*time_bin))
+  ddst_list.append((next_dst - dst)/4)
 elif int_hour_str == next_int_hour_str and int_hour_str != '24':
   dst_list.append(dst)
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
@@ -188,7 +188,7 @@ elif int_hour_str == next_int_hour_str and int_hour_str != '24':
 else:
   dst_list.append(dst)
   next_dst = dst_index_file['1'][dst_shifted].values[0]
-  ddst_list.append((next_dst - dst)/time_bin)
+  ddst_list.append((next_dst - dst)/4)
 ```
 
 It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
