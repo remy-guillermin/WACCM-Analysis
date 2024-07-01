@@ -171,20 +171,21 @@ The last case is when the hour is 24:00, in this case we need to get the first D
 ```python
 int_hour_str = str(int(time_slot) + 1)
 next_int_hour_str = str(int(time_slot + time_bin) + 1)
+second_next_int_hour_str = str(int(time_slot + 2 * time_bin) + 1)
 dst = dst_index_file[int_hour_str][dst_mask].values[0]
 
-if  (time_bin == 1 or int_hour_str == next_int_hour_str) and int_hour_str != '24':
+if  time_bin == 1 and int_hour_str != '24':
   dst_list.append(dst)
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
   ddst_list.append((next_dst - dst)/time_bin)
 elif int_hour_str != next_int_hour_str and int_hour_str != '24':
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0] 
   dst_list.append((dst + next_dst)/2)
-  ddst_list.append((next_dst - dst)/4)
+  ddst_list.append((next_dst - dst)/2)
 elif int_hour_str == next_int_hour_str and int_hour_str != '24':
   dst_list.append(dst)
   next_dst = dst_index_file[next_int_hour_str][dst_mask].values[0]
-  ddst_list.append((next_dst - dst)/time_bin)
+  ddst_list.append((next_dst - dst)/2)
 else:
   dst_list.append(dst)
   next_dst = dst_index_file['1'][dst_shifted].values[0]
