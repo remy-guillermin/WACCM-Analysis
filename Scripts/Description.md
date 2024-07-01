@@ -73,6 +73,9 @@ After this tricky part, we can plot the density profile as welle as the electron
 # DST.ipynb
 Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
 
+# omni_index.ipynb
+We need to do the same with omni indexes.
+
 # Hp30.ipynb
 We need to do the same with Hp30 index, but we use the `json`package here.
 
