@@ -36,7 +36,7 @@ We will only use the following keys.
 ```
 Next we want to produce a graphe of the electron density to see if we can extract the data from the file, for that we need to get only data for either Svalbard or Tromsø Radar, for that we create a mask on the latitude because there is not another radar for each interval. After that we can produce the final plot:
 
-![output](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/c9ef7e5e-df7d-451e-80af-3110ccd44d61)
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/463cd637-a209-4cd9-a383-23c098fb92ae)
 
 We need to take account of the fact that the model data extends for approximately 103 000 seconds, this means that we have more than one day (86 400 seconds) in each file and that a file can starts at any time of a day so we need to have the model file from the date before to have the full day coverage.
 
