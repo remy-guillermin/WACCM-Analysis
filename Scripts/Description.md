@@ -200,28 +200,17 @@ It is important to note that currently this script only supports one hour or hal
 # DST_comparison.ipynb
 This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index (and its gradient) for different altitude value.
 
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/03371bca-092f-43ee-b1a7-f57eb4c3330f)
-
 # IMF_comparison.ipynb
 This script does the same for IMF magnitude.
-
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/68fceedc-c3e3-42b9-8878-84232e3b7e15)
-
 
 # Hp30_comparison.ipynb
 This script does the same for the Hp30 index.
 
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/e496767a-f114-4b99-9fcd-33c6cb01b6cd)
-
 # speed_comparison.ipynb
 This script does the same for the wind speed.
-
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/cb6afd43-019b-425e-8891-27a2c82a6f59)
-
 
 # speed_before_comparison.ipynb
 This script does the same for the wind speed one hour before the wind reaches the Earth.
 
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/9d30bf43-4f5b-4d4e-b29b-e31fb826688e)
 
 
