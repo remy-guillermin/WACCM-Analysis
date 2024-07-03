@@ -68,7 +68,7 @@ This creates a Panda dataframe structured as it follows (for readability some ke
 
 After this tricky part, we can plot the density profile as welle as the electron and ion temperature profiles:
 
-![output](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/96335abb-96d0-4989-b272-48272f958fe9)
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/74b87733-432f-4129-a642-7dad4344d034)
 
 # DST.ipynb
 Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
@@ -198,14 +198,30 @@ else:
 It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
 
 # DST_comparison.ipynb
-This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index for different altitude value.
+This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index (and its gradient) for different altitude value.
 
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/23045a71-2b26-4842-af27-8c75743254d2)
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/03371bca-092f-43ee-b1a7-f57eb4c3330f)
+
+# IMF_comparison.ipynb
+This script does the same for IMF magnitude.
+
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/68fceedc-c3e3-42b9-8878-84232e3b7e15)
+
 
 # Hp30_comparison.ipynb
-This script does the same but for the Hp30 index.
+This script does the same for the Hp30 index.
 
-![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/a1d77042-0027-4835-b4a8-ff79e8e59dbc)
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/e496767a-f114-4b99-9fcd-33c6cb01b6cd)
 
+# speed_comparison.ipynb
+This script does the same for the wind speed.
+
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/cb6afd43-019b-425e-8891-27a2c82a6f59)
+
+
+# speed_before_comparison.ipynb
+This script does the same for the wind speed one hour before the wind reaches the Earth.
+
+![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/9d30bf43-4f5b-4d4e-b29b-e31fb826688e)
 
 
