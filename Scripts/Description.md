@@ -206,6 +206,12 @@ This script does the same for IMF magnitude.
 # Hp30_comparison.ipynb
 This script does the same for the Hp30 index.
 
+# SML_comparison.ipynb
+This script does the same for the SML value.
+
+# SML_comparison.ipynb
+This script does the same for the SML value.
+
 # speed_comparison.ipynb
 This script does the same for the wind speed.
 
