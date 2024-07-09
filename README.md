@@ -4,7 +4,8 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 ## Goals of the project
 - Plot measured electron density profiles together with approximately simultaneous model electron density profiles.
 - Describe differences in active and quiet ionospheric conditions.
-- Find what the differences rely on (Maybe DST index[^2], hp30 Index[^3], IMF[^4], Wind Speed, SML[^5], SMU[^6] Latitude of the Observatory, Height, etc ...)
+- Find relation with differents value (DST index[^2], hp30 Index[^3], IMF[^4], Wind Speed, SML[^5], SMU[^6] and Height have been tested) (Latitude of the instrument might be possible)
+  
 
 ## Informations
 ### Global informations
