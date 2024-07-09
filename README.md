@@ -21,7 +21,7 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 3) Starting point
    - Years 2004, 2008 and 2011 have Geomagnetic Storms[^8] and Solar Proton[^9] events (See [here](Event-Informations.md)).
 4) Code explanation and Analysis
-   - Code explanation [here]()
+   - Code explanation [here](Scripts/Description.md)
   
 ## Sources
 - EISCAT: [EISCAT website](https://portal.eiscat.se/schedule/?year=2004&month=1&A=on&TRO=on&ESR=on)
