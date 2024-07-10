@@ -14,11 +14,11 @@ First let's define the DST Index (*Disturbance Storm Time Index*) is an index of
 
 Here we can see that the DST index value itself doesn't seem to impact on the error magnitude. We can indeed tell that the higher we are, the lower the error is.
 
-
 <p align="center">
   <img src="Figures/DST-gradient-all.png" alt="DST gradient index" width="500">
 </p>
 
+The DST gradient is the only one that is not symetrical, we can clearly see that if the value is positive the error magnitude is way lower than if it is negative.
 
 
 
