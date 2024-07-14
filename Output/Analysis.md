@@ -51,9 +51,12 @@ We can see a tendency for the error magnitude to be lower when the index is high
 
 Not a lot of things to say about the gradient, this is a common thing for all gradients beside the DST gradient.
 
-
+### Auroral Electrojets Strength (SML & SMU)
+The SML and SMU indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
 
 
 [^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html#:~:text=The%20Disturbance%20Storm%20Time%20Index,the%20%22ring%20current%22).)
 
 [^2]: [Solar Influences Data Analysis Center](https://www.sidc.be/article/hpo)
+
+[^3]: [SuperMAG](https://supermag.jhuapl.edu/indices/?fidelity=low&layers=SME.UL&start=2001-01-29T23%3A00%3A00.000Z&step=14400&tab=about)
