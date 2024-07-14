@@ -91,7 +91,12 @@ We can still tell that the height has an impact on the error magnitude, the high
 > This assumption must be verified with more data from different year and/or observatories.
 
 ### Interplanetary Magnetic Field
+The IMF is the Magnetic Field dragged out of the sun by the solar wind. [^4]
 
+<div align="center">
+  <img src="Figures/IMF-all.png" alt="IMF index" width="300">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
 
 
 [^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html#:~:text=The%20Disturbance%20Storm%20Time%20Index,the%20%22ring%20current%22).)
@@ -99,3 +104,5 @@ We can still tell that the height has an impact on the error magnitude, the high
 [^2]: [Solar Influences Data Analysis Center](https://www.sidc.be/article/hpo)
 
 [^3]: [SuperMAG](https://supermag.jhuapl.edu/indices/?fidelity=low&layers=SME.UL&start=2001-01-29T23%3A00%3A00.000Z&step=14400&tab=about)
+
+[^4]: [National Aeronautics and Space Administration](https://solarscience.msfc.nasa.gov/people/suess/Interstellar_Probe/IMF/IMF.html)
