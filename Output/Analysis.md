@@ -85,11 +85,12 @@ We can see that we have a really strong presence around zero, meaning that the g
   <p><strong>Gradient Visualization - SME</strong></p>
 </div>
 
-We can still tell that the height has an impact on the error magnitude, the higher the better, but we can also see that for high altitude we have a slope looking like $f(x) = \frac{1}{|x|}$.
+We can still tell that the height has an impact on the error magnitude, the higher the better, but we can also see that for high altitude we have a slope looking like $f(x) = A/|x|$.
 
 > [!IMPORTANT]
 > This assumption must be verified with more data from different year and/or observatories.
 
+### Interplanetary Magnetic Field
 
 
 
