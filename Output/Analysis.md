@@ -1,4 +1,4 @@
-# Differences between Locations
+@# Differences between Locations
 First we can tell by looking at two plots (in `Output/Figures/`) comparing the same index that the two locations (Longyearbyen and Tromsø) have similar error magnitude for each height interval.
 
 # Using the different indexes
@@ -117,7 +117,9 @@ Last thing we have checked is the Solar Wind speed, which is the speed of the wi
 The only noticeable thing is that the gradient is not centered in 0, but this recenters when we take the solar wind speed one hour before.
 
 > [!NOTE]
-> We do this because we need to 'wait' for the wind to impact low altitude 
+> We do this because we need to 'wait' for the wind to impact low altitude such as 100km where WACCM have its modelisations.
+>
+> 1 seems to be a good approximation, but we could try with 30 minutes too.
 
 <div align="center">
   <img src="Figures/speed-1h-all.png" alt="Solar Wind speed 1 hour before">
@@ -125,7 +127,9 @@ The only noticeable thing is that the gradient is not centered in 0, but this re
   <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
 </div>
 
-
+With this work, we can already tell two things :
+1. WACCM fits better at its highest altitude range, 110-120 km and 120-130 km.
+2. WACCM 
 
 
 
