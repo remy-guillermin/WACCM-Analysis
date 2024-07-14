@@ -8,15 +8,17 @@ For the analysis, we will both study the impact of the index itself and its grad
 ### DST Index
 First let's define the DST Index (*Disturbance Storm Time Index*) is an index of magnetic activity derived from a network of near-equatorial geomagnetic observatories that measures the intensity of the globally symmetrical equatorial electrojet (the "ring current").[^1]
 
-<p align="center">
+<div align="center">
   <img src="Figures/DST-all.png" alt="DST index" width="500">
-</p>
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
 
 Here we can see that the DST index value itself doesn't seem to impact on the error magnitude. We can indeed tell that the higher we are, the lower the error is.
 
-<p align="center">
+<div align="center">
   <img src="Figures/DST-gradient-all.png" alt="DST gradient index" width="500">
-</p>
+  <p><strong>Index Gradient Visualization - DST</strong></p>
+</div>
 
 The DST gradient is the only one that is not symetrical, we can clearly see that if the value is positive the error magnitude is way lower than if it is negative.
 
@@ -28,15 +30,17 @@ The DST gradient is the only one that is not symetrical, we can clearly see that
 ### Hp30 index
 The geomagnetic Hp30 index is a Kp-like index with a time resolution of 30 minutes (another one exists with a time resolution of 60 minutes named Hp60). The main differences with Kp index is the time resolution (30 minutes against 3 hours) and the open scale for Hp30 compared to the capped at 9 Kp.[^2]
 
-<p align="center">
+<div align="center">
   <img src="Figures/Hp30vsKp.png" alt="Comparison of Hpo indexes and Kp index." width="500">
-</p>
+  <p><strong> Comparison between indexes - Hp30 & DST</strong></p>
+</div>
 
 This plot shows that with Hpo indexes we get more precise informations about the magnitude of the geomagnetic event happening.
 
-<p align="center">
+<div align="center">
   <img src="Figures/HP30-all.png" alt="DST index" width="500">
-</p>
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
 
 We can see a tendency for the error magnitude to be lower when the index is high, i.e. the geomagnetic storm is strong. 
 
@@ -45,14 +49,17 @@ We can see a tendency for the error magnitude to be lower when the index is high
 >
 > It is possible to add either different years apart from 2004, 2008 and 2011 that I used in the first place, or different location for the known geomagnetic storms during these years.
 
-<p align="center">
+<div align="center">
   <img src="Figures/HP30-gradient-all.png" alt="DST index" width="500">
-</p>
+  <p><strong>Index Gradient Visualization - Hp30</strong></p>
+</div>
 
 Not a lot of things to say about the gradient, this is a common thing for all gradients beside the DST gradient.
 
-### Auroral Electrojets Strength (SML & SMU)
-The SML and SMU indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
+### Auroral Electrojets Strength (SML, SMU & SME)
+The SML, SMU and SME indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength and SME is the difference between Eastward and Westward. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
+
+
 
 
 [^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html#:~:text=The%20Disturbance%20Storm%20Time%20Index,the%20%22ring%20current%22).)
