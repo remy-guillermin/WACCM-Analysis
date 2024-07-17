@@ -48,9 +48,11 @@ This shows that even though almost all bins contains less than 300 Data Points b
 In total we have more experiment Data Points, almost $3.5$ millions, than model Data Points, around $75,000$.
 
 
-# Index Analysis - Whole Data
+# Index Analysis 
 For the index analysis, we will both study the impact of the index itself and its gradient over time.
-## DST Index
+## Whole Data
+To begin with, we will use all experiments available, both radar and both active and quiet day, to see if any of the indexes have clear impact on the error magnitude.
+### DST Index
 First let's define the DST Index (*Disturbance Storm Time Index*) is an index of magnetic activity derived from a network of near-equatorial geomagnetic observatories that measures the intensity of the globally symmetrical equatorial electrojet (the "ring current").[^1]
 
 <div align="center">
@@ -72,7 +74,7 @@ The DST gradient is the only one that is not symetrical, we can clearly see that
 > 
 > This might be hard to do because positive DST gradient dont go really high into positive as geomagnetic disturbance come back to normal state slowly compared top fast change when a geomagnetic storm occurs.
 
-## Hp30 index
+### Hp30 index
 The geomagnetic Hp30 index is a Kp-like index with a time resolution of 30 minutes (another one exists with a time resolution of 60 minutes named Hp60). The main differences with Kp index is the time resolution (30 minutes against 3 hours) and the open scale for Hp30 compared to the capped at 9 Kp.[^2]
 
 <div align="center">
@@ -101,7 +103,7 @@ We can see a tendency for the error magnitude to be lower when the index is high
 
 Not a lot of things to say about the gradient, this is a common thing for all gradients beside the DST gradient.
 
-## Auroral Electrojets Strength - SML, SMU & SME
+### Auroral Electrojets Strength - SML, SMU & SME
 The SML, SMU and SME indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength and SME is the difference between Eastward and Westward. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
 
 <div align="center">
@@ -135,7 +137,7 @@ We can still tell that the height has an impact on the error magnitude, the high
 > [!IMPORTANT]
 > This assumption must be verified with more data from different year and/or observatories.
 
-## Interplanetary Magnetic Field
+### Interplanetary Magnetic Field
 The IMF is the Magnetic Field dragged out of the sun by the solar wind. [^4]
 
 <div align="center">
@@ -150,7 +152,7 @@ We cannot see any obvious correlation between the error magniture and the IMF, s
   <p><strong>Gradient Visualization - IMF</strong></p>
 </div>
 
-## Solar Wind speed 
+### Solar Wind speed 
 Last thing we have checked is the Solar Wind speed, which is the speed of the wind when it enters the Magnetosphere.
 
 <div align="center">
