@@ -1,6 +1,14 @@
 # Data Analysis
 ## Preamble
-We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data points divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data points are needed, this file contains 2 times more time interval and so **192** data points.
+We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data points divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data points are needed, this file contains 2 times more time interval and so **192** data points. 
+
+In reality we have more data points because each 10 km-1 hour interval, that we call bin from now one, is the mean value of either experiments value or modelelisation within both range, this means that we have a lot more data point inside each bin.
+
+<div align="center">
+  <img src="Figures/DST-all.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
 
 
 For the index analysis, we will both study the impact of the index itself and its gradient over time.
@@ -120,7 +128,7 @@ The only noticeable thing is that the gradient is not centered in 0, but this re
 > [!NOTE]
 > We do this because we need to 'wait' for the wind to impact low altitude such as 100km where WACCM have its modelisations.
 >
-> 1 seems to be a good approximation, but we could try with 30 minutes too.
+> 1 hour seems to be a good approximation, but we could try with 30 minutes too.
 
 <div align="center">
   <img src="Figures/speed-1h-all.png" alt="Solar Wind speed 1 hour before">
@@ -130,7 +138,7 @@ The only noticeable thing is that the gradient is not centered in 0, but this re
 
 With this work, we can already tell two things :
 1. WACCM fits better at its highest altitude range, 110-120 km and 120-130 km.
-2. WACCM 
+2. WACCM fits better for high intensity solar events.
 
 
 
