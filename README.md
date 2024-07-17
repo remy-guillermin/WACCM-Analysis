@@ -35,7 +35,7 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 
 
 > [!IMPORTANT]  
-> If you were to work on this project, email me at [remy.guillermin.73\@gmail.com](mailto:remy.guillermin.73@gmail.com?subject=WACCM%20Github%20Access%20Request&priority=high) with your Github so I can give you writing access to the github.
+> If you were to work on this project, email me at [remy.guillermin.73\@gmail.com](mailto:remy.guillermin.73@gmail.com?subject=WACCM%20Github%20Access%20Request) with your Github username, full name, or email so I can give you writing access to the github.
 
 [^1]: Whole Atmosphere Community Climate Model.
 [^2]: Disturbance Storm Time index, 1 hour resolution.
