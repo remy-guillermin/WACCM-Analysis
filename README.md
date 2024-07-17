@@ -5,7 +5,6 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 - Plot measured electron density profiles together with approximately simultaneous model electron density profiles.
 - Describe differences in active and quiet ionospheric conditions.
 - Find relation with differents value (DST index[^2], hp30 Index[^3], IMF[^4], Wind Speed, SML[^5], SMU[^6] and Height have been tested) (Latitude of the instrument might be possible)
-  
 
 ## Informations
 ### Global informations
@@ -33,6 +32,10 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
   
 ## Contributors
 - Rémy Guillermin (University Centre in Svalbard, 2024) supervised by Noora Partamies
+
+
+> [!IMPORTANT]  
+> If you were to work on this project, email me at [remy.guillermin.73\@gmail.com](mailto:remy.guillermin.73@gmail.com?subject=WACCM%20Github%20Access%20Request&priority=high) with your Github so I can give you writing access to the github.
 
 [^1]: Whole Atmosphere Community Climate Model.
 [^2]: Disturbance Storm Time index, 1 hour resolution.
