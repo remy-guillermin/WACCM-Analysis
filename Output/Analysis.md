@@ -1,5 +1,4 @@
-# Data Analysis
-## Preamble
+# Preamble
 We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data bins divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each, i.e. 32448 data bins in total. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data bins are needed, this file contains 2 times more time interval and so **192** data bins per day which rises the total number of data bins to 64896. 
 
 In reality we have more data points because each 10 km-1 hour interval, that we call bin from now on, is the mean value of either experiments value or modelisation within both range, this means that we have a lot more data point inside each bin. We can then plot a histogram of the number of appearance of each density of data points. 
@@ -48,10 +47,10 @@ This shows that even though almost all bins contains less than 300 Data Points b
 
 In total we have more experiment Data Points, almost $3.5$ millions, than model Data Points, around $75,000$.
 
-For the index analysis, we will both study the impact of the index itself and its gradient over time.
 
-## Whole Data
-### DST Index
+# Index Analysis - Whole Data
+For the index analysis, we will both study the impact of the index itself and its gradient over time.
+## DST Index
 First let's define the DST Index (*Disturbance Storm Time Index*) is an index of magnetic activity derived from a network of near-equatorial geomagnetic observatories that measures the intensity of the globally symmetrical equatorial electrojet (the "ring current").[^1]
 
 <div align="center">
@@ -73,7 +72,7 @@ The DST gradient is the only one that is not symetrical, we can clearly see that
 > 
 > This might be hard to do because positive DST gradient dont go really high into positive as geomagnetic disturbance come back to normal state slowly compared top fast change when a geomagnetic storm occurs.
 
-### Hp30 index
+## Hp30 index
 The geomagnetic Hp30 index is a Kp-like index with a time resolution of 30 minutes (another one exists with a time resolution of 60 minutes named Hp60). The main differences with Kp index is the time resolution (30 minutes against 3 hours) and the open scale for Hp30 compared to the capped at 9 Kp.[^2]
 
 <div align="center">
@@ -102,7 +101,7 @@ We can see a tendency for the error magnitude to be lower when the index is high
 
 Not a lot of things to say about the gradient, this is a common thing for all gradients beside the DST gradient.
 
-### Auroral Electrojets Strength - SML, SMU & SME
+## Auroral Electrojets Strength - SML, SMU & SME
 The SML, SMU and SME indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength and SME is the difference between Eastward and Westward. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
 
 <div align="center">
@@ -136,7 +135,7 @@ We can still tell that the height has an impact on the error magnitude, the high
 > [!IMPORTANT]
 > This assumption must be verified with more data from different year and/or observatories.
 
-### Interplanetary Magnetic Field
+## Interplanetary Magnetic Field
 The IMF is the Magnetic Field dragged out of the sun by the solar wind. [^4]
 
 <div align="center">
@@ -151,7 +150,7 @@ We cannot see any obvious correlation between the error magniture and the IMF, s
   <p><strong>Gradient Visualization - IMF</strong></p>
 </div>
 
-### Solar Wind speed 
+## Solar Wind speed 
 Last thing we have checked is the Solar Wind speed, which is the speed of the wind when it enters the Magnetosphere.
 
 <div align="center">
@@ -180,7 +179,7 @@ With this work, we can already tell two things :
 
 
 
-[^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html#:~:text=The%20Disturbance%20Storm%20Time%20Index,the%20%22ring%20current%22).)
+[^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html))
 
 [^2]: [Solar Influences Data Analysis Center](https://www.sidc.be/article/hpo)
 
