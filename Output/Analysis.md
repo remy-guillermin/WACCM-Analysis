@@ -1,21 +1,52 @@
 # Data Analysis
 ## Preamble
-We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data points divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data points are needed, this file contains 2 times more time interval and so **192** data points per day. 
+We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data bins divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each, i.e. 32448 data bins in total. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data bins are needed, this file contains 2 times more time interval and so **192** data bins per day which rises the total number of data bins to 64896. 
 
-In reality we have more data points because each 10 km-1 hour interval, that we call bin from now one, is the mean value of either experiments value or modelisation within both range, this means that we have a lot more data point inside each bin.
+In reality we have more data points because each 10 km-1 hour interval, that we call bin from now on, is the mean value of either experiments value or modelisation within both range, this means that we have a lot more data point inside each bin. We can then plot a histogram of the number of appearance of each density of data points. 
 
 <div align="center">
   <img src="Figures/Data-Point-Repartition.png" alt="Data Point Repartition">
-  <p><strong>Data point repartition - 10 km-1 hour bin</strong></p>
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
 </div>
+
+We can see that most model bins have a density of 1 data point per bin ($DP/bins$) and most experiment bins have a density less than 200 $DP/bins$, but we have a non negligeable amount of bins that have a high density (above 1500 $DP/bins$). Because of that, let's plot the cumulative amount of data points over the data point density.
 
 <div align="center">
   <img src="Figures/Data-Point-Sum.png" alt="Data Point Sum">
-  <p><strong>Data point fraction summed - 10 km-1 hour bin</strong></p>
+  <p><strong>Data point fraction summed - 10 km/1 hour bin</strong></p>
 </div>
 
-We can tell that we have more experiment Data Points, almost $3.5$ millions, than model data points, around $75,000$.
+For the experiment nothing suprising, we have almost all data points before 300, but for the model we can see that the density of 1 $DP/bins$ only give around 40% of all the data points. let's get the 50%, 80% and 95% value for both bins type.
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>90</td>
+      <td>139</td>
+      <td>240</td>
+      <td>1892</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
 
+This shows that even though almost all bins contains less than 300 Data Points but still 5% is above 1900 $DP/bins$ for the experiments.
+
+In total we have more experiment Data Points, almost $3.5$ millions, than model Data Points, around $75,000$.
 
 For the index analysis, we will both study the impact of the index itself and its gradient over time.
 
