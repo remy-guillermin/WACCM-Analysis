@@ -2,13 +2,14 @@
 ## Preamble
 We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data points divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivised in **24 time interval** of one hour each. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data points are needed, this file contains 2 times more time interval and so **192** data points. 
 
-In reality we have more data points because each 10 km-1 hour interval, that we call bin from now one, is the mean value of either experiments value or modelelisation within both range, this means that we have a lot more data point inside each bin.
+In reality we have more data points because each 10 km-1 hour interval, that we call bin from now one, is the mean value of either experiments value or modelisation within both range, this means that we have a lot more data point inside each bin.
 
 <div align="center">
-  <img src="Figures/DST-all.png" alt="DST index">
-  <p><strong>Index Visualization - DST</strong></p>
+  <img src="Figures/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km-1 hour bin</strong></p>
 </div>
 
+We can tell that we have more experiment Data Points, almost $3.5$ millions, than model data points, around $75,000$.
 
 
 For the index analysis, we will both study the impact of the index itself and its gradient over time.
