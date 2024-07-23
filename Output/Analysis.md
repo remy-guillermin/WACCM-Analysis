@@ -62,7 +62,7 @@ All previous plot were done with the whole dataset and will be redo for each cas
 # Dataset Analysis 
 For the index analysis, we will both study the impact of the index itself and its gradient over time.
 
-## Whole Data
+## Whole Dataset
 To begin with, we will use all experiments available, both radar and both active and quiet day, to see if any of the indexes have clear impact on the error magnitude.
 
 ### DST Index
