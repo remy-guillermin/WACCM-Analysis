@@ -219,4 +219,4 @@ This script does the same for the wind speed.
 This script does the same for the wind speed one hour before the wind reaches the Earth.
 
 
-
+ 
