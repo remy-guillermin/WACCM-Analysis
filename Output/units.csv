@@ -1,0 +1,33 @@
+Data, Units,
+Date, YYYY-MM-DD
+Hours, h
+Height, km
+Svalbard, (bool)
+Tromso, (bool)
+Geomagnetic Event, (bool)
+Solar Proton Event, (bool)
+Experimental Data Points, count
+Model Data Points, count
+EXP Density, m^-3
+EXP Density Error, m^-3
+WACCM Density, m^-3
+EXP Magnitude, No unit
+EXP Magnitude Error, No unit
+WACCM Magnitude, No unit
+DST Index, nT
+DST Index Gradient, nT.h^-1
+Hp30 Index, No unit
+Hp30 Index Gradient, No unit
+IMF, nT
+IMF Gradient, nT.h^-1
+Speed, km.s^-1
+Speed 1 hour before, km.s^-1
+Speed Gradient, km.s^-1.h^-1
+Speed Gradient 1 hour before, km.s^-1.h^-1
+SML, nT
+SML Gradient, nT.h^-1
+SMU, nT
+SMU Gradient, nT.h^-1
+SME, nT
+SME Gradient, nT.h^-1
+
