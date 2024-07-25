@@ -117,7 +117,7 @@ We can see a tendency for the error magnitude to be lower when the index is high
 Not a lot of things to say about the gradient, this is a common thing for all gradients beside the DST gradient.
 
 ### Auroral Electrojets Strength - SML, SMU & SME
-The SML, SMU and SME indices describe the same phenomenon, the only difference is that SML measure maximun Westward strength, where SMU measures Eastward strength and SME is the difference between Eastward and Westward. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
+The SML, SMU and SME indices describe the same phenomenon, the only difference is that SML measure maximum Westward strength, where SMU measures Eastward strength and SME is the difference between Eastward and Westward. Both come from stations between 40° and 80° magnetic north but SML is from the lower envelope and SMU the upper envelope.[^3]
 
 <div align="center">
   <img src="Figures/all/SMU.png" alt="SMU index">

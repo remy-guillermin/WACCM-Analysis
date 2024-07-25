@@ -49,11 +49,11 @@ This script shall be used first to sort all experiment data files into folder if
 ### DST.ipynb
 Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
 
-### omni_index.ipynb
-We need to do the same with omni indexes.
-
 ### Hp30.ipynb
 We need to do the same with Hp30 index, but we use the `json`package here.
+
+### omni_index.ipynb
+We need to do the same with omni indexes.
 
 ### SuperMAG_index.ipynb
 
@@ -177,6 +177,14 @@ else:
 ```
 
 It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
+
+### Add_omni.ipynb
+
+Because we already created the global data files, we need to append the new index that we will use. First is the omni indexes, Interplanetary Magnetic Field (IMF) and Wind Speed (speed). We also want to add the wind speed one hour before the measurements (this is a good approximation of a long it takes to the wind to reach WACCM height).
+
+### Add_supermag.ipynb
+
+We need to add also SuperMAG value, SML, SMU and SME, respectively maximum Westward strength, maximum Eastward strength and the difference between those two.
 
 ## Data Analysis
 
