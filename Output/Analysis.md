@@ -16,6 +16,7 @@ We can see that most model bins have a density of 1 data point per bin ($DP/bins
 </div>
 
 For the experiment nothing surprising, we have almost all data points before 300, but for the model we can see that the density of 1 $DP/bins$ only give around 40% of all the data points. let's get the 50%, 80% and 95% value for both bins type.
+
 <div align="center">
   <table>
     <tr>
@@ -78,10 +79,49 @@ We can finally plot the mean density for each bin by simply dividing the first h
 
 This histogram is not a lot different from the one Data point sum density one, we still see the strong difference between high and low altitude for the experiment and the two strong lines for the model.
 
+We can also plot an histogram to show the repartition for each height bin.
 
+<div align="center">
+  <img src="Figures/all/Data-Point-Repartition-Height.png" alt="Data Point Repartition Height">
+  <p><strong>Data point Repartition - 4 km bin</strong></p>
+</div>
 
+We do not see any strong difference in the height repartition for both histogram.
 
-All previous plot were done with the whole dataset and will be redo for each case of analysis (besides in the whole data analysis)
+<div align="center">
+  <img src="Figures/all/Data-Point-Sum-Height.png" alt="Data Point Repartition Height">
+  <p><strong>Data point Repartition - 4 km bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>102</td>
+      <td>114</td>
+      <td>122</td>
+      <td>126</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>106</td>
+      <td>122</td>
+      <td>122</td>
+      <td>126</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+> [!NOTE]
+> All previous plot were done with the whole dataset and will be redo for each case of analysis (besides in the whole data analysis)
 
 
 # Dataset Analysis 
