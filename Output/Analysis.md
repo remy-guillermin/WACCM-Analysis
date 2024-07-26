@@ -254,9 +254,12 @@ The only noticeable thing is that the gradient is not centered in 0, but this re
   <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
 </div>
 
-With this work, we can already tell two things :
+With this work, we can already tell overall two things :
 1. WACCM fits better at its highest altitude range, 110-120 km and 120-130 km.
 2. WACCM fits better for high intensity solar events.
+   
+## Svalbard Dataset
+We will next restrict the dataset for all events recorded in Svalbard.
 
 
 
