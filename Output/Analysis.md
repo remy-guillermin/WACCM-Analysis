@@ -194,7 +194,7 @@ The SML, SMU and SME indices describe the same phenomenon, the only difference i
 
 We can see a lower error magnitude when the electrojet strength is high (positive for SMU and negative for SML).
 <div align="center">
-  <img src="Figures/all/SML.png" alt="SME index">
+  <img src="Figures/all/SME.png" alt="SME index">
   <p><strong>Index Visualization - SME</strong></p>
 </div>
 
@@ -261,10 +261,127 @@ With this work, we can already tell overall two things :
 ## Svalbard Dataset
 We will next restrict the dataset for all events recorded in Svalbard.
 
+### Data Points
 
+<div align="center">
+  <img src="Figures/Svalbard/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
 
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>60</td>
+      <td>114</td>
+      <td>120</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
 
-[^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html))
+This time, we have a lot less high density bins and that almost all data points are under 100 $DP/bins$ for the experiment and not so much differences for the model. 
+
+<div align="center">
+  <img src="Figures/Svalbard/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get the same difference between high and low altitude for the data bins appearance, minus the stronger appearance for active day that we had for the whole dataset.
+
+<div align="center">
+  <img src="Figures/Svalbard/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+This plot shows an even stronger difference between high and low altitude as we get on average two times more data points under 110 km than above.
+
+The data point repartition for 4 km bin and Data point repartition sum for 4 km bin are the same as for the whole dataset.
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/Svalbard/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/Svalbard/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+<div align="center">
+  <img src="Figures/Svalbard/SMU.png" alt="SMU index">
+  <img src="Figures/Svalbard/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/Svalbard/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/Svalbard/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Svalbard/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+<div align="center">
+  <img src="Figures/Svalbard/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/Svalbard/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+[^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html)
 
 [^2]: [Solar Influences Data Analysis Center](https://www.sidc.be/article/hpo)
 
