@@ -120,6 +120,8 @@ We do not see any strong difference in the height repartition for both histogram
   <p><strong>Percentile value - Experiment and Model</strong></p>
 </div>
 
+This shows that we get almost half of all data points in the first third of the height.
+
 > [!NOTE]
 > All previous plot were done with the whole dataset and will be redo for each case of analysis (besides in the whole data analysis)
 
