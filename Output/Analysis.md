@@ -52,7 +52,7 @@ Then we can plot the sum of all data points within each bin in a 2D-histogram ov
 
 <div align="center">
   <img src="Figures/all/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
-  <p><strong>Data point sum density - 4 km/1 hour bin</strong></p>
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
 </div>
 
 This shows that for the model we have approximately a density of $1 \; DP/bins$ except for two specific height but this is because WACCM height interval is based on pressure so it is not exactly 4.
@@ -83,14 +83,14 @@ We can also plot an histogram to show the repartition for each height bin.
 
 <div align="center">
   <img src="Figures/all/Data-Point-Repartition-Height.png" alt="Data Point Repartition Height">
-  <p><strong>Data point Repartition - 4 km bin</strong></p>
+  <p><strong>Data point repartition - 4 km bin</strong></p>
 </div>
 
 We do not see any strong difference in the height repartition for both histogram.
 
 <div align="center">
-  <img src="Figures/all/Data-Point-Sum-Height.png" alt="Data Point Repartition Height">
-  <p><strong>Data point Repartition - 4 km bin</strong></p>
+  <img src="Figures/all/Data-Point-Sum-Height.png" alt="Data Point Repartition Sum Height">
+  <p><strong>Data point repartition summed - 4 km bin</strong></p>
 </div>
 
 <div align="center">
