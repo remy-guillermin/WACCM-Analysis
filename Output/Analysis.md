@@ -225,7 +225,7 @@ The IMF is the Magnetic Field dragged out of the sun by the solar wind. [^4]
   <p><strong>Index Visualization - IMF</strong></p>
 </div>
 
-We cannot see any obvious correlation between the error magniture and the IMF, same for its gradient.
+We cannot see any obvious correlation between the error magnitude and the IMF, same for its gradient.
 
 <div align="center">
   <img src="Figures/all/IMF-gradient.png" alt="IMF Gradient">
