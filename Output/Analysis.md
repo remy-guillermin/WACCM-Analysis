@@ -68,7 +68,7 @@ We can also plot the frequency of appearance of each bin in a 2D-histogram over 
 
 We can see that in reality we don't have the same frequency everywhere on the grid data bins. Because of that we drop down our data bins count from 32448 to 19593. 
 
-This histogram also shows that most of the experiments we uses are during active work hours (between 07:00 and 18:00), which is logical.
+This histogram also shows that most of the experiments we use are during active work hours (between 07:00 and 18:00), which is logical.
 
 We can finally plot the mean density for each bin by simply dividing the first histogram by the second.
 
