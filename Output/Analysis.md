@@ -147,12 +147,7 @@ Here we can see that the DST index value itself doesn't seem to impact on the er
   <p><strong>Gradient Visualization - DST</strong></p>
 </div>
 
-The DST gradient is the only one that is not symetrical, we can clearly see that if the value is positive the error magnitude is way lower than if it is negative.
-
-> [!IMPORTANT]
-> Find more positive value of DST gradient to see if this behavior become more and more visible.
-> 
-> This might be hard to do because positive DST gradient dont go really high into positive as geomagnetic disturbance come back to normal state slowly compared top fast change when a geomagnetic storm occurs.
+The DST gradient is the only one that is not symmetrical, we can clearly see that if the value is positive the error magnitude is way lower than if it is negative.
 
 ### Hp30 index
 The geomagnetic Hp30 index is a Kp-like index with a time resolution of 30 minutes (another one exists with a time resolution of 60 minutes named Hp60). The main differences with Kp index is the time resolution (30 minutes against 3 hours) and the open scale for Hp30 compared to the capped at 9 Kp.[^2]
@@ -162,7 +157,7 @@ The geomagnetic Hp30 index is a Kp-like index with a time resolution of 30 minut
   <p><strong> Comparison between indexes - Hp30 & DST</strong></p>
 </div>
 
-This plot shows that with Hpo indexes we get more precise informations about the magnitude of the geomagnetic event happening.
+This plot shows that with Hpo indexes we get more precise information about the magnitude of the geomagnetic event happening, especially about the variation.
 
 <div align="center">
   <img src="Figures/all/HP30.png" alt="Hp30 index">
@@ -170,11 +165,6 @@ This plot shows that with Hpo indexes we get more precise informations about the
 </div>
 
 We can see a tendency for the error magnitude to be lower when the index is high, i.e. the geomagnetic storm is strong. 
-
-> [!IMPORTANT]
-> Add more different strong geomagnetic events to see if this tendency became more or less visible.
->
-> It is possible to add either different years apart from 2004, 2008 and 2011 that I used in the first place, or different location for the known geomagnetic storms during these years.
 
 <div align="center">
   <img src="Figures/all/HP30-gradient.png" alt="Hp30 gradient">
@@ -213,9 +203,6 @@ We can see that we have a really strong presence around zero, meaning that the g
 </div>
 
 We can still tell that the height has an impact on the error magnitude, the higher the better, but we can also see that for high altitude we have a slope looking like $f(x) = A/|x|$.
-
-> [!IMPORTANT]
-> This assumption must be verified with more data from different year and/or observatories.
 
 ### Interplanetary Magnetic Field
 The IMF is the Magnetic Field dragged out of the sun by the solar wind. [^4]
@@ -380,6 +367,633 @@ The data point repartition for 4 km bin and Data point repartition sum for 4 km 
   <img src="Figures/Svalbard/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
   <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
 </div>
+
+## Tromsø Dataset
+We will next restrict the dataset for all events recorded in Tromsø.
+
+### Data Points
+
+<div align="center">
+  <img src="Figures/Tromso/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>120</td>
+      <td>240</td>
+      <td>1892</td>
+      <td>1980</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+For this dataset, we can see that the highest percentile are back really high, that explains that the highest data point density we have seen in the first place were due to Tromsø experiments.
+
+<div align="center">
+  <img src="Figures/Tromso/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get the same difference between high and low altitude for the data bins appearance and the stronger appearance for active day is back again.
+
+<div align="center">
+  <img src="Figures/Tromso/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/Tromso/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/Tromso/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+<div align="center">
+  <img src="Figures/Tromso/SMU.png" alt="SMU index">
+  <img src="Figures/Tromso/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/Tromso/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/Tromso/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/Tromso/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+<div align="center">
+  <img src="Figures/Tromso/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/Tromso/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+## Geomagnetic Dataset
+We will next restrict the dataset for all events that are geomagnetic.
+
+### Data Points
+
+<div align="center">
+  <img src="Figures/geo/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>62</td>
+      <td>147</td>
+      <td>180</td>
+      <td>237</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+For geomagnetic events, the percentile are similar to the ones from Svalbard.
+
+<div align="center">
+  <img src="Figures/geo/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get the same difference between high and low altitude for the data bins appearance and the stronger appearance for active day again disappeared.
+
+<div align="center">
+  <img src="Figures/geo/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/geo/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/geo/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+> [!WARNING]
+> For these indexes, we have changed the range of the indexes to show most of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/geo/SMU.png" alt="SMU index">
+  <img src="Figures/geo/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/geo/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/geo/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/geo/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+> [!WARNING]
+> For this index, we have changed the range of the index to show some of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/geo/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/geo/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+## Solar Proton Dataset
+We will next restrict the dataset for all events that are solar proton.
+
+### Data Points
+
+<div align="center">
+  <img src="Figures/sol/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>72</td>
+      <td>144</td>
+      <td>235</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+For solar proton events, the percentile are similar to the ones from Svalbard.
+
+<div align="center">
+  <img src="Figures/sol/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get the same data bins appearance for both high and low altitude and the stronger appearance for active day still disappeared.
+
+<div align="center">
+  <img src="Figures/sol/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/sol/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/sol/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+> [!WARNING]
+> For these indexes, we have changed the range of the indexes to show most of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/sol/SMU.png" alt="SMU index">
+  <img src="Figures/sol/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/sol/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/sol/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/sol/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+> [!WARNING]
+> For this index, we have changed the range of the index to show some of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/sol/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/sol/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+## Quiet Dataset
+We will next restrict the dataset for all events that are during quiet days, i.e. no geomagnetic nor solar proton events.
+
+### Data Points
+
+<div align="center">
+  <img src="Figures/quiet/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>90</td>
+      <td>135</td>
+      <td>250</td>
+      <td>1947</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+For quiet days, the percentile are similar to the ones from Tromsø.
+
+<div align="center">
+  <img src="Figures/quiet/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get the same difference between high and low altitude for the data bins appearance and the stronger appearance for active day is back.
+
+<div align="center">
+  <img src="Figures/quiet/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/quiet/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/quiet/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+<div align="center">
+  <img src="Figures/quiet/SMU.png" alt="SMU index">
+  <img src="Figures/quiet/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/quiet/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/quiet/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/quiet/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+<div align="center">
+  <img src="Figures/quiet/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/quiet/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+## Active Dataset
+We will finally restrict the dataset for all events that are during active days, i.e. geomagnetic or solar proton events.
+
+### Data Points
+
+<div align="center">
+  <img src="Figures/active/Data-Point-Repartition.png" alt="Data Point Repartition">
+  <p><strong>Data point repartition - 10 km/1 hour bin</strong></p>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Percentile</th>
+      <td>50%</td>
+      <td>80%</td>
+      <td>90%</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <th>Experiment</th>
+      <td>72</td>
+      <td>144</td>
+      <td>230</td>
+      <td>239</td>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <p><strong>Percentile value - Experiment and Model</strong></p>
+</div>
+
+For quiet days, the percentile are similar to the ones from Svalbard.
+
+<div align="center">
+  <img src="Figures/active/Data-Point-Density-Sum.png" alt="Data Point Density Sum">
+  <p><strong>Data point appearance - 4 km/1 hour bin</strong></p>
+</div>
+
+We get a data bins appearance similar for high and low altitude and the stronger appearance for active day is here but weaker than for svalbard.
+
+<div align="center">
+  <img src="Figures/active/Data-Point-Density.png" alt="Data Point Density">
+  <p><strong>Data point mean density - 4 km/1 hour bin</strong></p>
+</div>
+
+### DST Index
+
+<div align="center">
+  <img src="Figures/active/DST.png" alt="DST index">
+  <p><strong>Index Visualization - DST</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/DST-gradient.png" alt="DST gradient index">
+  <p><strong>Gradient Visualization - DST</strong></p>
+</div>
+
+### Hp30 index
+
+<div align="center">
+  <img src="Figures/active/HP30.png" alt="Hp30 index">
+  <p><strong>Index Visualization - Hp30</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/HP30-gradient.png" alt="Hp30 gradient index">
+  <p><strong>Gradient Visualization - Hp30</strong></p>
+</div>
+
+### Auroral Electrojets Strength - SML, SMU & SME
+
+> [!WARNING]
+> For these indexes, we have changed the range of the indexes to show most of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/active/SMU.png" alt="SMU index">
+  <img src="Figures/active/SML.png" alt="SML index">
+  <p><strong>Index Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/SME.png" alt="SME index">
+  <p><strong>Index Visualization - SME</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/SMU-gradient.png" alt="SMU gradient">
+  <img src="Figures/active/SML-gradient.png" alt="SML gradient">
+  <p><strong>Gradient Visualization - SMU & SML</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/SME-gradient.png" alt="SME Gradient">
+  <p><strong>Gradient Visualization - SME</strong></p>
+</div>
+
+### Interplanetary Magnetic Field
+
+<div align="center">
+  <img src="Figures/active/IMF.png" alt="IMF index">
+  <p><strong>Index Visualization - IMF</strong></p>
+</div>
+
+<div align="center">
+  <img src="Figures/active/IMF-gradient.png" alt="IMF Gradient">
+  <p><strong>Gradient Visualization - IMF</strong></p>
+</div>
+
+### Solar Wind speed 
+
+> [!WARNING]
+> For this index, we have changed the range of the index to show some of the data points that were outside the range used before.
+
+<div align="center">
+  <img src="Figures/active/speed-1h.png" alt="Solar Wind speed 1 hour before">
+  <img src="Figures/active/speed-1h-gradient.png" alt="Solar Wind speed gradient 1 hour before">
+  <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
+</div>
+
+
+> [!IMPORTANT]
+> Find more positive value of DST gradient to see if this behavior become more and more visible.
+> 
+> This might be hard to do because positive DST gradient doesn't go really high into positive as geomagnetic disturbance come back to normal state slowly compared top fast change when a geomagnetic storm occurs.
+
+> [!IMPORTANT]
+> Add more different strong geomagnetic events to see if this tendency became more or less visible.
+>
+> It is possible to add either different years apart from 2004, 2008 and 2011 that I used in the first place, or different location for the known geomagnetic storms during these years.
+
+> [!IMPORTANT]
+> This assumption must be verified with more data from different year and/or observatories.
 
 [^1]: [National Oceanic and Atmospheric Administration](https://www.ngdc.noaa.gov/stp/geomag/dst.html)
 
