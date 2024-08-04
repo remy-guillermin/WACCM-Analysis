@@ -981,6 +981,18 @@ We get a data bins appearance similar for high and low altitude and the stronger
   <p><strong>Index & Gradient Visualization - Solar Wind speed 1 hour before</strong></p>
 </div>
 
+# Conclusion
+
+To begin with, we can plot the mean error magnitude for each event type, as we can already tell that the lower we are, the higher the error will be.
+
+<div align="center">
+  <img src="Figures/error-events.png" alt="Error magnitude">
+  <p><strong>Mean Error Magnitude - All event types</strong></p>
+</div>
+
+
+# Side Notes
+
 
 > [!IMPORTANT]
 > Find more positive value of DST gradient to see if this behavior become more and more visible.
