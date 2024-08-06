@@ -983,12 +983,23 @@ We get a data bins appearance similar for high and low altitude and the stronger
 
 # Conclusion
 
-To begin with, we can plot the mean error magnitude for each event type, as we can already tell that the lower we are, the higher the error will be.
+To begin with, we can plot the mean error magnitude as a function of height for each event type, as we can already tell that the lower we are, the higher the error will be.
 
 <div align="center">
-  <img src="Figures/error-events.png" alt="Error magnitude">
-  <p><strong>Mean Error Magnitude - All event types</strong></p>
+  <img src="Figures/error-events-height.png" alt="Error magnitude over height">
+  <p><strong>Mean Error Magnitude over Height - All event types</strong></p>
 </div>
+
+and we can also do the same for UT time.
+
+<div align="center">
+  <img src="Figures/error-events-time.png" alt="Error magnitude over time">
+  <p><strong>Mean Error Magnitude over Time - All event types</strong></p>
+</div>
+
+> [!IMPORTANT]
+>
+> The standard deviation is computed separately for lower value than for higher value, that's why we have not a centered mean value
 
 
 # Side Notes
