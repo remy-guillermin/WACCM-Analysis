@@ -990,16 +990,26 @@ To begin with, we can plot the mean error magnitude as a function of height for 
   <p><strong>Mean Error Magnitude over Height - All event types</strong></p>
 </div>
 
-and we can also do the same for UT time.
+We can also do the same for [UT time](Figures/error-events/height.png), but we get no significant results.
+
+We end with the mean error magnitude over the density magnitude and its gradient over time :
 
 <div align="center">
-  <img src="Figures/error-events/time.png" alt="Error magnitude over time">
-  <p><strong>Mean Error Magnitude over Time - All event types</strong></p>
+  <img src="Figures/error-events/density.png" alt="Error magnitude over density">
+  <img src="Figures/error-events/density-gradient.png" alt="Error magnitude over density gradient">
+  <p><strong>Mean Error Magnitude over Density and Density Gradient - All event types</strong></p>
 </div>
+
+> [!NOTE]
+>
+> For the density gradient, we have the absolute value of the gradient as x-axis.
+
 
 > [!IMPORTANT]
 >
 > The standard deviation is computed separately for lower value than for higher value, that's why we have not a centered mean value
+
+We can see that for high density points, or strong changes in the density, the model will diverge rapidly. 
 
 
 # Side Notes
