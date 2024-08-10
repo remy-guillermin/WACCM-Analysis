@@ -56,7 +56,6 @@ We need to do the same with Hp30 index, but we use the `json`package here.
 We need to do the same with omni indexes.
 
 ### SuperMAG_index.ipynb
-
 Last we do the same for the SuperMAG indexes (SME, SMU and SML).
 
 ### Create_CSV.ipynb
@@ -66,14 +65,15 @@ It's important to note that we can only use EISCAT files from either Tromsø or 
 
 Here is the structure of one global data file :
 
-| Date       | Hours | Height | Svalbard | Tromso | Geomagnetic Event | Solar Proton Event | Experimental Data Points | Model Data Points | EXP Density | EXP Density Error | WACCM Density | EXP Magnitude | EXP Magnitude Error | WACCM Magnitude | DST Index | DST Index Gradient | Hp30 Index | Hp30 Index Gradient | IMF  | IMF Gradient | Speed  | Speed 1 hour before | Speed Gradient | Speed Gradient 1 hour before | SML     | SML Gradient | SMU   | SMU Gradient | SME   | SME Gradient |
-| ---------- | ----- | ------ | -------- | ------ | ----------------- | ------------------ | ------------------------ | ----------------- | ----------- | ----------------- | ------------- | ------------- | ------------------- | --------------- | --------- | ------------------ | ---------- | ------------------- | ---- | ------------ | ------ | ------------------- | -------------- | ---------------------------- | ------- | ------------ | ----- | ------------ | ----- | ------------ |
-| 2004-01-14 | 9.0   | 90     | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 659456637   | 1681254727        | 2479583097    | 8.81          | 9.22                | 9.39            | -6.0      | -4.0               | 3.0        | -0.66               | 6.14 | -0.33        | 545.19 | 535.96              | -14.34         | 5.66                         | -71.3   | 7.09         | 153.5 | -20.69       | 224.8 | -27.8        |
-| 2004-01-14 | 9.5   | 90     | 1        | 0      | 0                 | 0                  | 30.0                     | 1.0               | 682141246   | 1154373994        | 2460064336    | 8.83          | 9.06                | 9.39            | -10.0     | -4.0               | 2.33       | 0.0                 | 5.81 | -0.02        | 530.85 | 502.66              | 5.11           | 25.68                        | -64.2   | -65.1        | 132.8 | -31.1        | 197.0 | 34.0         |
-| 2004-01-14 | 10.0  | 90     | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 696178246   | 866611309         | 2465102573    | 8.84          | 8.93                | 9.39            | -14.0     | -1.5               | 2.33       | 0.33                | 5.78 | 1.76         | 535.96 | 498.68              | -33.29         | 16.2                         | -129.3  | -2.39        | 101.7 | -20.1        | 231.0 | -17.7        |
-| 2004-01-14 | 10.5  | 90     | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 702768122   | 1140190903        | 2475819042    | 8.84          | 9.05                | 9.39            | -15.5     | -1.5               | 2.66       | -0.66               | 7.55 | 0.1          | 502.66 | 494.43              | -3.98          | 18.46                        | -131.69 | -61.0        | 81.59 | -6.59        | 213.3 | 54.4         |
-| 2004-01-14 | 11.0  | 90     | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 703778803   | 1117979387        | 2526585708    | 8.84          | 9.04                | 9.4             | -17.0     | -1.0               | 2.0        | -0.33               | 7.65 | -0.04        | 498.68 | 494.01              | -4.25          | 9.23                         | -192.7  | -67.3        | 75.0  | 0.9          | 267.7 | 68.19        |
-| 2004-01-14 | 11.5  | 90     | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 699140435   | 665202103         | 2501844736    | 8.84          | 8.82                | 9.39            | -18.0     | -1.0               | 1.66       | 0.0                 | 7.6  | 0.2          | 494.43 | 498.11              | -0.41          | 28.18                        | -260.0  | -84.39       | 75.9  | -22.8        | 335.9 | 61.6         |
+| Date       | Hours | Height        | Svalbard | Tromso | Geomagnetic Event | Solar Proton Event | Experimental Data Points | Model Data Points | EXP Density       | EXP Density Error | WACCM Density     | EXP Magnitude | EXP Magnitude Error | WACCM Magnitude | DST Index     | DST Index Gradient   | Hp30 Index | Hp30 Index Gradient | IMF           | IMF Gradient         | Speed                | Speed 1 hour before  | Speed Gradient              | Speed Gradient 1 hour before | SML           | SML Gradient         | SMU           | SMU Gradient         | SME           | SME Gradient         |
+| ---------- | ----- | ------------- | -------- | ------ | ----------------- | ------------------ | ------------------------ | ----------------- | ----------------- | ----------------- | ----------------- | ------------- | ------------------- | --------------- | ------------- | -------------------- | ---------- | ------------------- | ------------- | -------------------- | -------------------- | -------------------- | --------------------------- | ---------------------------- | ------------- | -------------------- | ------------- | -------------------- | ------------- | -------------------- |
+| YYYY-MM-DD | Hours | $\mathrm{km}$ | bool     | bool   | bool              | bool               | number                   | number            | $\mathrm{m^{-3}}$ | $\mathrm{m^{-3}}$ | $\mathrm{m^{-3}}$ | No units      | No units            | No units        | $\mathrm{nT}$ | $\mathrm{nT.h^{-1}}$ | No unit    | No unit             | $\mathrm{nT}$ | $\mathrm{nT.h^{-1}}$ | $\mathrm{km.s^{-1}}$ | $\mathrm{km.s^{-1}}$ | $\mathrm{km.s^{-1}.h^{-1}}$ | $\mathrm{km.s^{-1}.h^{-1}}$  | $\mathrm{nT}$ | $\mathrm{nT.h^{-1}}$ | $\mathrm{nT}$ | $\mathrm{nT.h^{-1}}$ | $\mathrm{nT}$ | $\mathrm{nT.h^{-1}}$ |
+| 2004-01-14 | 9.0   | 90            | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 659456637         | 1681254727        | 2479583097        | 8.81          | 9.22                | 9.39            | -6.0          | -4.0                 | 3.0        | -0.66               | 6.14          | -0.33                | 545.19               | 535.96               | -14.34                      | 5.66                         | -71.3         | 7.09                 | 153.5         | -20.69               | 224.8         | -27.8                |
+| 2004-01-14 | 9.5   | 90            | 1        | 0      | 0                 | 0                  | 30.0                     | 1.0               | 682141246         | 1154373994        | 2460064336        | 8.83          | 9.06                | 9.39            | -10.0         | -4.0                 | 2.33       | 0.0                 | 5.81          | -0.02                | 530.85               | 502.66               | 5.11                        | 25.68                        | -64.2         | -65.1                | 132.8         | -31.1                | 197.0         | 34.0                 |
+| 2004-01-14 | 10.0  | 90            | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 696178246         | 866611309         | 2465102573        | 8.84          | 8.93                | 9.39            | -14.0         | -1.5                 | 2.33       | 0.33                | 5.78          | 1.76                 | 535.96               | 498.68               | -33.29                      | 16.2                         | -129.3        | -2.39                | 101.7         | -20.1                | 231.0         | -17.7                |
+| 2004-01-14 | 10.5  | 90            | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 702768122         | 1140190903        | 2475819042        | 8.84          | 9.05                | 9.39            | -15.5         | -1.5                 | 2.66       | -0.66               | 7.55          | 0.1                  | 502.66               | 494.43               | -3.98                       | 18.46                        | -131.69       | -61.0                | 81.59         | -6.59                | 213.3         | 54.4                 |
+| 2004-01-14 | 11.0  | 90            | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 703778803         | 1117979387        | 2526585708        | 8.84          | 9.04                | 9.4             | -17.0         | -1.0                 | 2.0        | -0.33               | 7.65          | -0.04                | 498.68               | 494.01               | -4.25                       | 9.23                         | -192.7        | -67.3                | 75.0          | 0.9                  | 267.7         | 68.19                |
+| 2004-01-14 | 11.5  | 90            | 1        | 0      | 0                 | 0                  | 28.0                     | 1.0               | 699140435         | 665202103         | 2501844736        | 8.84          | 8.82                | 9.39            | -18.0         | -1.0                 | 1.66       | 0.0                 | 7.6           | 0.2                  | 494.43               | 498.11               | -0.41                       | 28.18                        | -260.0        | -84.39               | 75.9          | -22.8                | 335.9         | 61.6                 |
 
 
 Experiment value files have location indicator in their name which allows us to simply search them in the file name.
@@ -189,14 +189,18 @@ We need to add also SuperMAG value, SML, SMU and SME, respectively maximum Westw
 ## Data Analysis
 
 ### Data_points.ipynb
-
 This script plot first two histogram of the repartition of data points, one for low density ($<300$) and one for high density ($>500$) for the experiment and one histogram for the model.
 
 It next plots a scatter of the fraction of data points which are under a specific value to find the percentile for each data set.
 
 ### Data_bins.ipynb
-
 This script plot a heatmap of the repartition of data bins over the data set. 
+
+### global_error.ipynb
+This script compute every error plots that we uses in the analysis.
+
+### Event-Analysis.ipynb
+This script allows us to plot one event (Experiment Densities, WACCM Densities, Normalized Error and Absolute Error) that we choose.
 
 ### DST_comparison.ipynb
 This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index (and its gradient) for different altitude value.
@@ -248,6 +252,6 @@ This creates a Panda dataframe structured as it follows (for readability some ke
 ]
 ```
 
-After this tricky part, we can plot the density profile as welle as the electron and ion temperature profiles:
+After this tricky part, we can plot the density profile as well as the electron and ion temperature profiles:
 
 ![image](https://github.com/remy-guillermin/WACCM-Analysis/assets/100087560/74b87733-432f-4129-a642-7dad4344d034)
