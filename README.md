@@ -4,12 +4,12 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 ## Goals of the project
 - Plot measured electron density profiles together with approximately simultaneous model electron density profiles.
 - Describe differences in active and quiet ionospheric conditions.
-- Find relation with differents value (DST index[^2], hp30 Index[^3], IMF[^4], Wind Speed, SML[^5], SMU[^6] and Height have been tested) (Latitude of the instrument might be possible)
+- Find relation with different values (DST index[^2], hp30 Index[^3], IMF[^4], Wind Speed, SML[^5], SMU[^6], SME[^7], Densities value, Densities gradient and Height have been tested) (Latitude of the instrument might be possible)
 
 ## Informations
 ### Global informations
 1) Experiments data
-   - Mostly EISCAT[^7] measurements.
+   - Mostly EISCAT[^8] measurements.
    - _May be possible to use data from other organisation_.
 2) WACCM data
    - Data exist from 2000 to 2014.
@@ -18,7 +18,7 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
      - SPE: With energetic solar protons only.
      - EEPSPE: With both energetic protons and electrons.   
 3) Starting point
-   - Years 2004, 2008 and 2011 have Geomagnetic Storms[^8] and Solar Proton[^9] events (See [here](Event-Informations.md)).
+   - Years 2004, 2008 and 2011 have Geomagnetic Storms[^9] and Solar Proton[^10] events (See [here](Event-Informations.md)).
 4) Code explanation and Analysis
    - Code explanation [here](Scripts/Description.md)
    - Analysis [here](Output/Analysis.md)
@@ -47,6 +47,7 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 [^4]: Interplanetary Magnetic Field.
 [^5]: Maximum westward auroral electrojets strength.
 [^6]: Maximum eastward auroral electrojets strength.
-[^7]: European Incoherent Scatter Scientific Association.
-[^8]: Temporary disturbance of the Earth's magnetosphere caused by a solar wind shock wave.
-[^9]: Emission of protons by the Sun, accelerated either in the Sun's atmosphere during a solar flare or in interplanetary space by a coronal mass ejection shock.
+[^7]: SMU - SML
+[^8]: European Incoherent Scatter Scientific Association.
+[^9]: Temporary disturbance of the Earth's magnetosphere caused by a solar wind shock wave.
+[^10]: Emission of protons by the Sun, accelerated either in the Sun's atmosphere during a solar flare or in interplanetary space by a coronal mass ejection shock.
