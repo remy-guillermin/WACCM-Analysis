@@ -22,6 +22,10 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 4) Code explanation and Analysis
    - Code explanation [here](Scripts/Description.md)
    - Analysis [here](Output/Analysis.md)
+5) Known improvements
+   - Currently, a day is considered a geomagnetic or a solar proton event even if only 1 hour is the actual event. 
+   - Only 15 out of 338 events are active events, we need more data on other year to get more precise comparison with indices.
+   - If the output `csv` file becomes too large, it is possible to remove all zeros rows but this would mean to change all analysis after.
   
 ## Sources
 - EISCAT: [EISCAT website](https://portal.eiscat.se/schedule/?year=2004&month=1&A=on&TRO=on&ESR=on)
