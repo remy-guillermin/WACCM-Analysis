@@ -11,19 +11,26 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
 1) Experiments data
    - Mostly EISCAT[^8] measurements.
    - _May be possible to use data from other organisation_.
+   - Sporadic measurements with variable height and time resolution.
+   - Data is downloaded through the EISCAT website.
 2) WACCM data
-   - Data exist from 2000 to 2014.
+   - Data exist for more than 30 years and saved into ~250 MB files.
    - 3 Differents runs
      - NOSPE: Without energetic electrons or protons.
      - SPE: With energetic solar protons only.
-     - EEPSPE: With both energetic protons and electrons.   
+     - EEPSPE: With both energetic protons and electrons.
+   - Mixing ratio as a function of pressure levels as input.
+   - No height resolution and half an hour time resolution.
 3) Starting point
    - Years 2004, 2008 and 2011 have Geomagnetic Storms[^9] and Solar Proton[^10] events (See [here](Event-Informations.md)).
+   - Convert both datasets into comparable format (i.e. height and time grid with fixed bins)
 4) Code explanation and Analysis
    - Code explanation [here](Scripts/Description.md)
    - Analysis [here](Output/Analysis.md)
 5) Known improvements
-   - Currently, a day is considered a geomagnetic or a solar proton event even if only 1 hour is the actual event. 
+   - Currently,
+      - a day is considered a geomagnetic or a solar proton event even if only 1 hour is the actual event.
+      - an EISCAT measurements is accounted into a bin only if its starting height is within the bin.
    - Only 15 out of 338 events are active events, we need more data on other year to get more precise comparison with indices.
    - If the output `csv` file becomes too large, it is possible to remove all zeros rows but this would mean to change all analysis after.
   
