@@ -43,20 +43,13 @@ We need to take account of the fact that the model data extends for approximatel
 
 ## Utils
 
-### sort.ipynb
-This script shall be used first to sort all experiment data files into folder if this cannot be done by hand.
+### Add_omni.ipynb
 
-### DST.ipynb
-Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
+Because we already created the global data files, we need to append the new index that we will use. First is the omni indexes, Interplanetary Magnetic Field (IMF) and Wind Speed (speed). We also want to add the wind speed one hour before the measurements (this is a good approximation of a long it takes to the wind to reach WACCM height).
 
-### Hp30.ipynb
-We need to do the same with Hp30 index, but we use the `json`package here.
+### Add_supermag.ipynb
 
-### omni_index.ipynb
-We need to do the same with omni indexes.
-
-### SuperMAG_index.ipynb
-Last we do the same for the SuperMAG indexes (SME, SMU and SML).
+We need to add also SuperMAG value, SML, SMU and SME, respectively maximum Westward strength, maximum Eastward strength and the difference between those two.
 
 ### Create_CSV.ipynb
 This script must be used only to create the global data files named like `global_data_4_0.5.csv`, where in this case `4` is the value of one altitude slot and `0.5` the value of one time slot. 
@@ -178,13 +171,20 @@ else:
 
 It is important to note that currently this script only supports one hour or half an hour time bin, but this is not really a problem as Hp30 index come with a 30 minutes time interval aswell as the model that predicts for the next 30 minutes.
 
-### Add_omni.ipynb
+### DST.ipynb
+Because we can only find DST index values for one year, we need to regroup the three years into one file, this can be done easily with the `panda` package.
 
-Because we already created the global data files, we need to append the new index that we will use. First is the omni indexes, Interplanetary Magnetic Field (IMF) and Wind Speed (speed). We also want to add the wind speed one hour before the measurements (this is a good approximation of a long it takes to the wind to reach WACCM height).
+### Hp30.ipynb
+We need to do the same with Hp30 index, but we use the `json`package here.
 
-### Add_supermag.ipynb
+### SuperMAG_index.ipynb
+Last we do the same for the SuperMAG indexes (SME, SMU and SML).
 
-We need to add also SuperMAG value, SML, SMU and SME, respectively maximum Westward strength, maximum Eastward strength and the difference between those two.
+### omni_index.ipynb
+We need to do the same with omni indexes.
+
+### sort.ipynb
+This script shall be used first to sort all experiment data files into folder if this cannot be done by hand.
 
 ## Data Analysis
 
@@ -200,7 +200,15 @@ This script plot a heatmap of the repartition of data bins over the data set.
 This script compute every error plots that we uses in the analysis.
 
 ### Event-Analysis.ipynb
-This script allows us to plot one event (Experiment Densities, WACCM Densities, Normalized Error and Absolute Error) that we choose.
+This script allows us to plot one event (Experiment Densities, WACCM Densities, Normalized Error and Error Magnitude) that we choose.
+
+Normalized Error is computed as follows.
+
+$$\Delta_{\mathrm{NORM}} = \frac{\mathrm{Ne_{EXP}} - \mathrm{Ne_{MOD}}}{\mathrm{Ne_{EXP}} + \mathrm{Ne_{MOD}}}$$
+
+The Error Magnitude is simply 
+
+$$\Delta_{\mathrm{MAG}} = \frac{|\mathrm{Ne_{EXP}} - \mathrm{Ne_{MOD}}|}{\mathrm{Ne_{EXP}}}$$
 
 ### DST_comparison.ipynb
 This script use the global data file to plot informations about the DST index. In our case we use it to plot the relation between density magnitude difference and the DST index (and its gradient) for different altitude value.
