@@ -1,12 +1,25 @@
 ### Geomagnetic Storms informations
 - [22 January 2004](Output/Figures/events/2004-01-22.png)
+- 11 February 2004 to 12 February 2004 [^1]
+- 9 March 2004 to 11 March 2004 [^1]
 - [3 April 2004 to 4 April 2004](Output/Figures/events/2004-04-03.png)
+- 5 April 2004 to 6 April 2004 [^1]
+- 17 July 2004 [^1]
 - 23 July 2004 to 28 July 2004
 - [30 August 2004 to 31 August 2004](Output/Figures/events/2004-08-30.png)
 - [8 November 2004 to 10 November 2004](Output/Figures/events/2004-11-09.png) ([2](Output/Figures/events/2004-11-10.png))
+- 9 March 2008 [^1]
+- 10 October 2008 [^1]
+- 7 January 2011 [^1]
+- 4 February 2011 to 5 February 2011 [^1]
 - [1 March 2011](Output/Figures/events/2011-03-01.png)
+- 11 March 2011 to 12 March 2011 [^1]
 - 6 April 2011
+- 12 April 2011 [^1]
+- 28 May 2011 [^1]
+- 6 August 2011 to 8 August 2011 [^1]
 - 9 September 2011 to 10 September 2011
+- 17 September 2011 to 18 September 2011 [^1]
 - 26 September 2011 to 27 September 2011
 - 25 October 2011
 
@@ -23,3 +36,6 @@
 - 9 August 2011 08:45 to 9 August 2011 12:10
 - 23 September 2011 22:55 to 26 September 2011 11:55
 - [26 November 2011 11:25 to 27 November 2011 01:25](Output/Figures/events/2011-11-26.png)
+
+
+[^1]: Manually added event
