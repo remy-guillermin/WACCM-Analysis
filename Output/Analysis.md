@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Each plot in this file does not include the new geomagnetic events that has been manually added.
+
 # Preamble
 We study all experiments available on the years **2004**, **2008** and **2011** and for both **Svalbard Radar** and **Tromsø Radar**. We have **338** different experiments repartited on **278** different dates, with each **96** data bins divided in **4 height interval** of 10 km each : **90-100 km**, **100-110 km**, **110-120 km** and **120-130km**. Each height interval is then subdivided in **24 time interval** of one hour each, i.e. 32448 data bins in total. The output file corresponding is `global_data_10_1.csv`, it is possible to use `global_data_10_0.5.csv` if more data bins are needed, this file contains 2 times more time interval and so **192** data bins per day which rises the total number of data bins to 64896. 
 
