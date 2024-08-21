@@ -23,6 +23,7 @@ Analysis of the WACCM[^1] Model of particle precipitation in the ionosphere.
    - No height resolution and half an hour time resolution.
 3) Starting point
    - Years 2004, 2008 and 2011 have Geomagnetic Storms[^9] and Solar Proton[^10] events (See [here](Event-Informations.md)).
+     - A geomagnetic event is when the DST value reaches below $-50$ nT.
    - Convert both datasets into comparable format (i.e. height and time grid with fixed bins)
 4) Code explanation and Analysis
    - Code explanation [here](Scripts/Description.md)
