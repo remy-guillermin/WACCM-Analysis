@@ -1,27 +1,27 @@
 ### Geomagnetic Storms informations
-- [22 January 2004](Output/Figures/events/2004-01-22.png)
-- [11 February 2004](Output/Figures/events/2004-02-11.png) to 12 February 2004 [^1]
-- 9 March 2004 to [11 March 2004](Output/Figures/events/2004-03-11.png) [^1]
-- [3 April 2004](Output/Figures/events/2004-04-03.png) to 4 April 2004
-- 5 April 2004 to [6 April 2004](Output/Figures/events/2004-04-06) [^1]
-- 17 July 2004 [^1]
-- 23 July 2004 to 28 July 2004
-- [30 August 2004](Output/Figures/events/2004-08-30.png) to 31 August 2004
-- [9 November 2004](Output/Figures/events/2004-11-09.png) to [10 November 2004](Output/Figures/events/2004-11-10.png)
-- 9 March 2008 [^1]
-- 10 October 2008 [^1]
-- 7 January 2011 [^1]
-- [4 February 2011](Output/Figures/events/2011-02-04) to [5 February 2011](Output/Figures/events/2011-02-05) [^1]
-- [1 March 2011](Output/Figures/events/2011-03-01.png)
-- 11 March 2011 to 12 March 2011 [^1]
-- 6 April 2011
-- 12 April 2011 [^1]
-- 28 May 2011 [^1]
-- 6 August 2011 to 8 August 2011 [^1]
-- 9 September 2011 to 10 September 2011
-- 17 September 2011 to 18 September 2011 [^1]
-- [26 September 2011](Output/Figures/events/2011-11-26) to 27 September 2011
-- 25 October 2011
+- [22 January 2004](Output/Figures/events/2004-01-22.png) ($-130$ nT)
+- [11 February 2004](Output/Figures/events/2004-02-11.png) to 12 February 2004 [^1] ($-93$ nT)
+- 9 March 2004 to [11 March 2004](Output/Figures/events/2004-03-11.png) [^1] ($-78$ nT)
+- [3 April 2004](Output/Figures/events/2004-04-03.png) to 4 April 2004 ($-117$ nT)
+- 5 April 2004 to [6 April 2004](Output/Figures/events/2004-04-06) [^1] ($-58$ nT)
+- 17 July 2004 [^1] ($-76$ nT)
+- 23 July 2004 to 28 July 2004 ($-150$ nT)
+- [30 August 2004](Output/Figures/events/2004-08-30.png) to 31 August 2004 ($-129$ nT)
+- [9 November 2004](Output/Figures/events/2004-11-09.png) to [10 November 2004](Output/Figures/events/2004-11-10.png) ($-374$ nT)
+- 9 March 2008 [^1] ($-70$ nT)
+- 10 October 2008 [^1] ($-54$ nT)
+- 7 January 2011 [^1] ($-42$ nT)
+- [4 February 2011](Output/Figures/events/2011-02-04) to [5 February 2011](Output/Figures/events/2011-02-05) [^1] ($-54$ nT)
+- [1 March 2011](Output/Figures/events/2011-03-01.png) ($-88$ nT)
+- 11 March 2011 to 12 March 2011 [^1] ($-83$ nT)
+- 6 April 2011 ($-60$ nT)
+- 12 April 2011 [^1] ($-48$ nT)
+- 28 May 2011 [^1] ($-80$ nT)
+- 6 August 2011 to 8 August 2011 [^1] ($-115$ nT)
+- 9 September 2011 to 10 September 2011 ($-74$ nT)
+- 17 September 2011 to 18 September 2011 [^1] ($-72$ nT)
+- [26 September 2011](Output/Figures/events/2011-11-26) to 27 September 2011 ($-118$ nT)
+- 25 October 2011 ($-147$ nT)
 
 ### Solar Proton Events informations
 - 11 April 2004 11:35 to 11 April 2004 18:45
